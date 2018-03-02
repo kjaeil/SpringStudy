@@ -1,0 +1,176 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="/webjars/bootstrap/3.3.7/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="/webjars/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/webjars/jqcloud2/2.0.3/dist/jqcloud.min.css">
+<link rel="stylesheet" href="/webjars/origoni-startbootstrap-clean-blog/1.0.3/css/clean-blog.min.css">
+<style type="text/css">
+
+.btn-group-xs>.btn, .btn-xs {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+.btn-group-sm>.btn, .btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+/* Custom Button Styles */
+.btn-dark {
+	border-radius: 0;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 10px 16px;
+	font-size: 18px;
+	line-height: 1.3333333;
+}
+
+.btn-dark:hover, .btn-dark:focus, .btn-dark:active {
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.btn-light {
+	border-radius: 0;
+	color: #333;
+	padding: 10px 20px 10px 0;
+	font-size: 18px;
+	line-height: 1.3333333;
+}
+
+/* Side Menu */
+#sidebar-wrapper {
+	z-index: 1000;
+	position: fixed;
+	right: 0;
+	width: 250px;
+	height: 100%;
+	margin-right: -250px;
+	overflow-y: auto;
+	background: #222;
+	-webkit-transition: all 0.4s ease 0s;
+	-moz-transition: all 0.4s ease 0s;
+	-ms-transition: all 0.4s ease 0s;
+	-o-transition: all 0.4s ease 0s;
+	transition: all 0.4s ease 0s;
+}
+
+.sidebar-nav {
+	position: absolute;
+	top: 0;
+	width: 250px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sidebar-nav li {
+	text-indent: 20px;
+	line-height: 40px;
+}
+
+.sidebar-nav li a {
+	display: block;
+	text-decoration: none;
+	color: #999;
+}
+
+.sidebar-nav li a:hover {
+	text-decoration: none;
+	color: #fff;
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+	text-decoration: none;
+}
+
+.sidebar-nav>.sidebar-brand {
+	height: 55px;
+	font-size: 18px;
+	line-height: 55px;
+}
+
+.sidebar-nav>.sidebar-brand a {
+	color: #999;
+}
+
+.sidebar-nav>.sidebar-brand a:hover {
+	color: #fff;
+	background: none;
+}
+
+.sidebar-nav .divider {
+	height: 1px;
+	margin: 9px 0;
+	overflow: hidden;
+	background-color: #444;
+}
+
+#menu-toggle {
+	z-index: 1;
+	position: fixed;
+	top: 5px;
+	right: 5px;
+	color: #fff;
+}
+
+#menu-home {
+	z-index: 1;
+	position: fixed;
+	top: 5px;
+	right: 60px;
+	color: #fff;
+}
+
+#sidebar-wrapper.active {
+	right: 250px;
+	width: 250px;
+	-webkit-transition: all 0.4s ease 0s;
+	-moz-transition: all 0.4s ease 0s;
+	-ms-transition: all 0.4s ease 0s;
+	-o-transition: all 0.4s ease 0s;
+	transition: all 0.4s ease 0s;
+}
+
+.toggle {
+	top: 5px;
+	right: 0px;
+	position: absolute;
+}
+
+
+/*	go to top
+================================================== */
+.backToTop {
+    position: fixed;
+    bottom: 10px;
+    z-index: 1000;
+    right: 10px;
+}
+
+.backToTop a {
+    opacity: .4;
+    width: 50px;
+    text-indent: -9999px;
+    height: 50px;
+    display: block;
+    margin: 0;
+    background: #53a3b7 url(/image/top.png) no-repeat center center;
+}
+
+.backToTop a:hover {
+    opacity: .8;
+}
+
+/*	go to top
+================================================== */
+</style>

@@ -1,0 +1,87 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://www.facebook.com/jaeil.kim.3958">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/origoni">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/origoni">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Powered By <a href="http://millky.com">Hagami</a> | Skin designed by <a href="http://startbootstrap.com/template-overviews/clean-blog/">Start Bootstrap</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<div>
+	<span class="backToTop" id="backToTop"><a href="#top">back to top</a></span>
+</div>
+
+<script src="/webjars/jquery/3.3.1/dist/jquery.min.js"></script>
+<script src="/webjars/bootstrap/3.3.7/dist/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+	// Closes the sidebar menu
+	$("#menu-close").click(function(e) {
+		e.preventDefault();
+		$("#sidebar-wrapper").removeClass("active");
+	});
+
+	// Opens the sidebar menu
+	var loadTag = false;
+	$("#menu-toggle").click(function(e) {
+		e.preventDefault();
+		
+		/*if (loadTag == false) {
+			$.ajax({
+				url : '/api/v1/tag-cloud',
+				dataType : 'json',
+				success : function(word_array) {
+					$("#tag-cloud").jQCloud(word_array);
+					loadTag = true;
+				}
+			})
+		}*/
+		
+		$("#sidebar-wrapper").toggleClass("active");
+	});
+
+	// hide .backToTop first
+	$(".backToTop").hide();
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 100) {
+			$('.backToTop').fadeIn();
+		} else {
+			$('.backToTop').fadeOut();
+		}
+	});
+
+	$('.backToTop').click(function() {
+		$("html, body").animate({
+			scrollTop : 0
+		}, 300);
+		return false;
+	});
+</script>
