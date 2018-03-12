@@ -51,6 +51,4 @@ public class Post {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "categoryId", insertable = false, updatable = false)
 	private Category category;
-	
-	// Google Map Time Zone Key = AIzaSyAlw6CDKvB98rUl63treUNj_lTN3i8IzvI
 }

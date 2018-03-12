@@ -28,6 +28,31 @@
 							<span class="subheading" id="time">
 								<%@ include file="/WEB-INF/jspf/time.jspf"%>
 							</span>
+							<span class="subheading">
+								<c:if test="${Weather eq 'Haze'}">
+									<c:out value="안개 " escapeXml="true"></c:out>
+								</c:if>
+								<c:if test="${Weather eq 'Clear'}">
+									<c:out value="맑음 " escapeXml="true"></c:out>
+								</c:if>
+								<c:if test="${Weather eq 'Snow'}">
+									<c:out value="눈 " escapeXml="true"></c:out>
+								</c:if>
+								<c:if test="${Weather eq 'Clouds'}">
+									<c:out value="구름 많음 " escapeXml="true"></c:out>
+								</c:if>
+								<c:if test="${Weather eq 'Rain'}">
+									<c:out value="많은 비 " escapeXml="true"></c:out>
+								</c:if>
+								<c:if test="${Weather eq 'Drizzle'}">
+									<c:out value="적은 비 " escapeXml="true"></c:out>
+								</c:if>
+								<c:if test="${Weather eq 'Thunderstorm'}">
+									<c:out value="번개 " escapeXml="true"></c:out>
+								</c:if>
+								
+								<c:out value="${Degree}" escapeXml="true"></c:out>
+							</span>
 						</h2>
 					</div>
 				</div>
