@@ -20,6 +20,9 @@
 						<h1>Login</h1>
 						<hr class="small">
 						<span class="subheading">Connect to Facebook</span>
+						<span class="subheading" id="time">
+								<%@ include file="/WEB-INF/jspf/time.jspf"%>
+							</span>
 					</div>
 				</div>
 			</div>

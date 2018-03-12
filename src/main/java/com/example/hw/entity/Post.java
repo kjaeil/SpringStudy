@@ -23,27 +23,27 @@ public class Post {
 
 	@Id
 	@GeneratedValue
-	int id;
+	private int id;
 
-	String userId;
-	String name;
+	private String userId;
+	private String name;
 
 	@NotNull
 	@Size(min = 1, max = 255)
 	@Column(nullable = false)
-	String title;
+	private String title;
 
 	@Size(max = 255)
-	String subtitle;
+	private String subtitle;
 
 	@NotNull
 	@Size(min = 1, max = 100000000)
 	@Column(length = 100000000)
-	String content;
+	private String content;
 
-	String _csrf;
+	private String _csrf;
 
-	LocalDateTime regDate;
+	private LocalDateTime regDate;
 
 	@Min(value = 1)
 	private int categoryId;
@@ -51,4 +51,6 @@ public class Post {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "categoryId", insertable = false, updatable = false)
 	private Category category;
+	
+	// Google Map Time Zone Key = AIzaSyAlw6CDKvB98rUl63treUNj_lTN3i8IzvI
 }

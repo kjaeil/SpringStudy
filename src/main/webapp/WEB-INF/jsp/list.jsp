@@ -5,7 +5,7 @@
 <html lang="ko">
 <head>
 <%@ include file="/WEB-INF/jspf/head.jspf"%>
-<link rel="shortcut icon" href="/nglelogo.png"/>
+<link rel="shortcut icon" href="/nglelogo.png" />
 <title>Hello Ngle Blog</title>
 </head>
 <body>
@@ -23,6 +23,12 @@
 						<h1>Ngle Blog</h1>
 						<hr class="small">
 						<span class="subheading">Ngle Blog from Hagami</span>
+						<!--  현재 시간 자리   -->
+						<h2>
+							<span class="subheading" id="time">
+								<%@ include file="/WEB-INF/jspf/time.jspf"%>
+							</span>
+						</h2>
 					</div>
 				</div>
 			</div>

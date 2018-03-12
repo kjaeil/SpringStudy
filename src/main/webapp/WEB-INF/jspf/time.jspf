@@ -1,0 +1,59 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<script>
+
+clock();
+
+setInterval(
+			function() 
+			{
+				
+			clock();
+			
+			}, 100)
+
+function clock() {
+		
+		var now = new Date();
+		
+		var Hour = now.getHours();
+		var Minute = now.getMinutes();
+		var Second = now.getSeconds();
+		var ampm = "am";
+		
+		if (Hour >= 12) 
+		{
+			if(Hour == 12)
+			{
+				ampm = "pm";
+			}
+			
+			else
+			{
+				var temp;
+				temp = Hour - 12;
+
+				Hour = "" + temp;
+
+				ampm = "pm";
+			}
+		}
+		
+		if(Minute < 10)
+		{
+			Minute = "0" + Minute;	
+		}
+		
+		if(Second < 10)
+		{
+			Second = "0" + Second;
+		}
+		
+
+		var time = Hour + ":" + Minute + ":" + Second + " " + ampm;
+		
+		document.getElementById("time").innerHTML=time;
+	}
+	
+</script>
